@@ -1,0 +1,321 @@
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:black;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:red;
+margin: 10px;
+}
+
+.nav-links button{
+margin:0 10px;
+background:none;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0)
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 500px;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.hero-book-btn {
+  background: #e50914;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.hero-book-btn:hover {
+  background: #ff1f2e;
+  transform: translateY(-2px);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  display: inline-block;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #e50914;
+  transform: scale(1.2);
+}
+
+.book-btn{
+margin-top:10px;
+padding:10px 20px;
+background:red;
+border:none;
+color:white;
+border-radius:6px;
+}
+
+.welcome{
+padding:30px 40px;
+}
+
+.search-container{
+padding:0 40px;
+}
+
+.search-container input{
+width:350px;
+padding:10px;
+border-radius:6px;
+border:none;
+}
+
+.categories{
+padding:20px 40px;
+}
+
+.categories button{
+margin-right:10px;
+padding:8px 15px;
+border-radius:20px;
+border:1px solid gray;
+background:#111;
+color:white;
+cursor:pointer;
+}
+
+.movies-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.movie-card{
+background:#111;
+padding:10px;
+border-radius:10px;
+width: 300px; 
+}
+
+.movie-card img{
+width:100%;
+border-radius:8px;
+} 
+
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+.movies-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
+  padding:30px;
+}
+
+.movie-card{
+  background:#111827;
+  border-radius:14px;
+  overflow:hidden;
+  color:white;
+  position:relative;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.movie-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.movie-theater{
+  font-size:12px;
+  color:#aaa;
+  margin-bottom:10px;
+  margin-top:10px;
+  cursor:pointer;
+} 
+
+.movie-theater:hover{
+  color:red;
+  text-decoration:underline;
+}
+
+.movie-poster{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.rating-badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#111;
+  padding:4px 10px;
+  border-radius:6px;
+  font-size:12px;
+  border:1px solid gold;
+}
+
+.genre-tag{
+  position:absolute;
+  bottom:380px;
+  left:10px;
+  background:red;
+  padding:4px 10px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+.movie-info{
+  padding:16px;
+}
+
+.movie-info h3{
+  margin-bottom:8px;
+}
+
+.movie-meta{
+  display:flex;
+  gap:10px;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:8px;
+}
+
+.movie-desc{
+  font-size:13px;
+  color:#bbb;
+  margin-bottom:10px;
+}
+
+.showtimes{
+  font-size:12px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.showtimes span{
+  background:#1f2937;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+.seats{
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.seat-count{
+  float:right;
+  color:#22c55e;
+}
+
+.price-book{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.price{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.book-btn{
+  background:green;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.book-btn:hover{
+  background:rgb(1, 58, 1);
+}

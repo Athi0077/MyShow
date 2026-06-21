@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background: #0d0d0d;
+  color: white;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 1;
+  padding: 60px;
+  background: linear-gradient(135deg, #0d0d0d, #1a0000);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff3c3c;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #ff3c3c;
+}
+
+.left p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.features .feature {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.feature h4 {
+  margin-bottom: 4px;
+}
+
+/* RIGHT SIDE */
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #121212;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.tabs {
+  display: flex;
+  background: #1e1e1e;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #ff3c3c;
+  color: white;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.sub {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff3c3c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.demo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.demo p {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.demo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.demo-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin {
+  background: #2a1a1a;
+  color: #ff8080;
+}
+
+.user {
+  background: #1a1f2a;
+  color: #80aaff;
+}
+
+/* INPUT ROW (2 columns) */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* Highlighted input (red border like screenshot) */
+.highlight {
+  border: 1px solid #ff3c3c !important;
+}
+
+/* Improve input style */
+input {
+  width: 100%;
+  padding: 12px;
+  background: #1e1e1e;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border: 1px solid #ff3c3c;
+  box-shadow: 0 0 5px rgba(255, 60, 60, 0.5);
+}
+
+/* Button update */
+.main-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff1e1e, #ff3c3c);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  opacity: 0.9;
+}
+
+/* Admin Access Button bottom-left */
+.admin-access-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  padding: 12px 20px;
+  background: #ff3c3c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-access-btn:hover {
+  background: #e02a2a;
+}
+
+/* Admin Popup Overlay */
+.admin-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Admin Popup Container */
+.admin-popup {
+  background: #121212;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.admin-popup h2 {
+  margin-bottom: 15px;
+  color: #ff3c3c;
+}
+
+.admin-popup input {
+  padding: 12px;
+  background: #1e1e1e;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.admin-popup input:focus {
+  border: 1px solid #ff3c3c;
+  box-shadow: 0 0 8px rgba(255, 60, 60, 0.6);
+}
+
+.admin-popup .main-btn {
+  margin-top: 10px;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff1e1e, #ff3c3c);
+  font-weight: 700;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background: #333;
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #555;
+}

@@ -1,0 +1,13 @@
+.admin-name {
+  background: linear-gradient(150deg, #c87800, #00c80a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 5px;
+  font-size: 32px;
+}
+/* 
+.admin-name:hover {
+  transform: translateY(50px);
+  color: red;
+} */
