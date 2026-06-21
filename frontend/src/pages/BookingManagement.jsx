@@ -22,8 +22,8 @@ export default function BookingManagement() {
     const token = localStorage.getItem("token");
     const adminId = localStorage.getItem("adminId");
     const url = adminId && adminId !== "null" && adminId !== "undefined"
-      ? `http://localhost:5000/api/bookings?adminId=${adminId}`
-      : `http://localhost:5000/api/bookings`;
+      ? `https://myshow-5n9t.onrender.com/api/bookings?adminId=${adminId}`
+      : `https://myshow-5n9t.onrender.com/api/bookings`;
 
     fetch(url, {
       headers: {

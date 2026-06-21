@@ -25,7 +25,7 @@ export default function UserDashboard() {
 
   // Fetch movies
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("https://myshow-5n9t.onrender.com/api/movies")
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(err => console.log(err));

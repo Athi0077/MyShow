@@ -26,8 +26,8 @@ export default function AdminDashboard() {
     try {
       const adminId = localStorage.getItem("adminId");
       const url = adminId && adminId !== "null" && adminId !== "undefined"
-        ? `http://localhost:5000/api/movies?adminId=${adminId}`
-        : `http://localhost:5000/api/movies`;
+        ? `https://myshow-5n9t.onrender.com/api/movies?adminId=${adminId}`
+        : `https://myshow-5n9t.onrender.com/api/movies`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -45,8 +45,8 @@ export default function AdminDashboard() {
       const token = localStorage.getItem("token");
       const adminId = localStorage.getItem("adminId");
       const url = adminId && adminId !== "null" && adminId !== "undefined"
-        ? `http://localhost:5000/api/bookings?adminId=${adminId}`
-        : `http://localhost:5000/api/bookings`;
+        ? `https://myshow-5n9t.onrender.com/api/bookings?adminId=${adminId}`
+        : `https://myshow-5n9t.onrender.com/api/bookings`;
 
       const res = await fetch(url, {
         headers: {

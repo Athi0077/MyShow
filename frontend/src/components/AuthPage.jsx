@@ -34,7 +34,7 @@ const AuthPage = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/user/login", {
+      const res = await fetch("https://myshow-5n9t.onrender.com/api/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const AuthPage = () => {
     localStorage.setItem("email", email);
 
     try {
-      const res = await fetch("http://localhost:5000/api/user/signup", {
+      const res = await fetch("https://myshow-5n9t.onrender.com/api/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -135,7 +135,7 @@ const AuthPage = () => {
         ? { email: adminEmail, password: adminPassword, securityKey: adminSecurityKey }
         : { email: adminEmail, theaterName: adminTheaterName, mapUrl: adminMapUrl, password: adminPassword, securityKey: adminSecurityKey };
 
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`https://myshow-5n9t.onrender.com${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

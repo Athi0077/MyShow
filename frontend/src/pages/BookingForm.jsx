@@ -38,7 +38,7 @@ export default function BookingForm({ movie, onClose }) {
                 });
                 if (showDate) params.append("showDate", showDate);
 
-                const res = await fetch(`http://localhost:5000/api/seats/occupied?${params}`);
+                const res = await fetch(`https://myshow-5n9t.onrender.com/api/seats/occupied?${params}`);
                 const data = await res.json();
 
                 setOccupiedSeats(data.occupiedSeats || []);
@@ -96,7 +96,7 @@ export default function BookingForm({ movie, onClose }) {
 
             if (payment.paymentId) {
 
-                const res = await fetch("http://localhost:5000/api/bookings", {
+                const res = await fetch("https://myshow-5n9t.onrender.com/api/bookings", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

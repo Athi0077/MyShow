@@ -17,8 +17,8 @@ export default function MovieManagement() {
     try {
       const adminId = localStorage.getItem("adminId");
       const url = adminId && adminId !== "null"
-        ? `http://localhost:5000/api/movies?adminId=${adminId}`
-        : `http://localhost:5000/api/movies`;
+        ? `https://myshow-5n9t.onrender.com/api/movies?adminId=${adminId}`
+        : `https://myshow-5n9t.onrender.com/api/movies`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -53,7 +53,7 @@ export default function MovieManagement() {
 
       const token = localStorage.getItem("token");
 
-      await fetch(`http://localhost:5000/api/movies/${id}`, {
+      await fetch(`https://myshow-5n9t.onrender.com/api/movies/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`

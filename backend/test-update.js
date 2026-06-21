@@ -2,7 +2,7 @@
 async function test() {
   // 1. Admin login
   console.log("Logging in as admin...");
-  const loginRes = await fetch("http://localhost:5000/api/admin/login", {
+  const loginRes = await fetch("https://myshow-5n9t.onrender.com/api/admin/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -14,7 +14,7 @@ async function test() {
   
   if (!loginRes.ok) {
     console.log("Login failed! Trying to signup first...");
-    const signupRes = await fetch("http://localhost:5000/api/admin/signup", {
+    const signupRes = await fetch("https://myshow-5n9t.onrender.com/api/admin/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -37,7 +37,7 @@ async function test() {
 
   // 2. Fetch movies
   console.log("Fetching movies...");
-  const moviesRes = await fetch("http://localhost:5000/api/movies");
+  const moviesRes = await fetch("https://myshow-5n9t.onrender.com/api/movies");
   const movies = await moviesRes.json();
   
   if (movies.length === 0) {
@@ -49,7 +49,7 @@ async function test() {
   console.log("Updating movie:", movie._id);
   
   // 3. Update movie
-  const updateRes = await fetch(`http://localhost:5000/api/movies/${movie._id}`, {
+  const updateRes = await fetch(`https://myshow-5n9t.onrender.com/api/movies/${movie._id}`, {
     method: "PUT",
     headers: { 
       "Content-Type": "application/json",

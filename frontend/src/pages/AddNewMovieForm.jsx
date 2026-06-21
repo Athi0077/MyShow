@@ -51,8 +51,8 @@ export default function AddNewMovieForm({ onClose, movieData }) {
         return;
       }
       const url = movieData
-        ? `http://localhost:5000/api/movies/${movieData._id}`
-        : "http://localhost:5000/api/admin/add-movie";
+        ? `https://myshow-5n9t.onrender.com/api/movies/${movieData._id}`
+        : "https://myshow-5n9t.onrender.com/api/admin/add-movie";
 
       const method = movieData ? "PUT" : "POST";
 

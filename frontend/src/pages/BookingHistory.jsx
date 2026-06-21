@@ -13,7 +13,7 @@ const BookingHistory = () => {
         }
 
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:5000/api/bookings/${email}`, {
+        fetch(`https://myshow-5n9t.onrender.com/api/bookings/${email}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -37,7 +37,7 @@ const BookingHistory = () => {
 
     const handleCancel = (id) => {
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:5000/api/bookings/${id}/cancel`, {
+        fetch(`https://myshow-5n9t.onrender.com/api/bookings/${id}/cancel`, {
             method: "PUT",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -54,7 +54,7 @@ const BookingHistory = () => {
 
     const handleDelete = (id) => {
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:5000/api/bookings/${id}`, {
+        fetch(`https://myshow-5n9t.onrender.com/api/bookings/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
